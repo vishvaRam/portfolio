@@ -27,25 +27,32 @@ class _MobileLandingPageState extends State<MobileLandingPage> with SingleTicker
   void initState() {
 
     print("init of Landing Section");
-    _animationController= AnimationController(vsync: this,duration: Duration(milliseconds: 200));
-    Timer(Duration(milliseconds: 200),()=>    _animationController.forward());
+    _animationController= AnimationController(vsync: this,duration: Duration(milliseconds: 400));
+    Timer(Duration(milliseconds: 500),()=>    _animationController.forward());
     super.initState();
   }
-  @override
-  Widget build(BuildContext context) {
-    imageOfVishva =Image.asset(
+
+  imagesetter(BuildContext context){
+    return imageOfVishva =Image.asset(
       "Assets/Images/vishva.png",
       fit: BoxFit.contain,
       alignment: Alignment.bottomCenter,
       width: MediaQuery.of(context).size.width - 10,
       height: MediaQuery.of(context).size.height,
     );
+  }
+  @override
+  Widget build(BuildContext context) {
+   
     return Container(
       height: MediaQuery.of(context).size.height - kNavBarHeightMobile,
       color: kGrayBackground,
       child: MaxWidth(
         child: SlideTransition(
-          position: Tween<Offset>(begin: Offset(0,0.3),end: Offset.zero,).animate(_animationController),
+          position: Tween<Offset>(begin: Offset(0,0.3),end: Offset.zero,).animate(CurvedAnimation(
+              parent: _animationController,
+              curve: Curves.easeOut
+          )),
           child: FadeTransition(
             opacity: _animationController,
             child: Column(
@@ -108,7 +115,7 @@ class _MobileLandingPageState extends State<MobileLandingPage> with SingleTicker
                 Expanded(
                     flex: 6,
                     child: Container(
-                        child:  imageOfVishva))
+                        child:  imagesetter(context)))
               ],
             ),
           ),

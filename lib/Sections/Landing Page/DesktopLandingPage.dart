@@ -25,8 +25,8 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
   void initState() {
 
     print("init of Landing Section");
-    _animationController= AnimationController(vsync: this,duration: Duration(milliseconds: 200));
-    Timer(Duration(milliseconds: 200),()=>    _animationController.forward());
+    _animationController= AnimationController(vsync: this,duration: Duration(milliseconds: 400));
+    Timer(Duration(milliseconds: 500),()=>    _animationController.forward());
     super.initState();
   }
   @override
@@ -35,16 +35,19 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
     super.dispose();
   }
 
-
-  @override
-  Widget build(BuildContext context) {
-    imageOfVishva =Image.asset(
+  imagesetter(BuildContext context){
+    return imageOfVishva =Image.asset(
       "Assets/Images/vishva.png",
       fit: BoxFit.contain,
       alignment: Alignment.bottomCenter,
       width: MediaQuery.of(context).size.width - 10,
       height: MediaQuery.of(context).size.height,
     );
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height - kNavBarHeightMobile,
       padding: EdgeInsets.symmetric(horizontal: 20),
@@ -53,7 +56,10 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: SlideTransition(
-            position: Tween<Offset>(begin: Offset(0,0.3),end: Offset.zero,).animate(_animationController),
+            position: Tween<Offset>(begin: Offset(0,0.3),end: Offset.zero,).animate( CurvedAnimation(
+                parent: _animationController,
+                curve: Curves.easeOut
+            )),
             child: FadeTransition(
               opacity: _animationController,
               child: Row(
@@ -129,7 +135,7 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
                       child: Container(
                           height: MediaQuery.of(context).size.height,
                           alignment: Alignment.center,
-                          child: imageOfVishva))
+                          child: imagesetter(context)))
                 ],
               ),
             ),

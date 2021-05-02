@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/Constants/Constants.dart';
 import 'package:portfolio/Custom_Widgets/MaxWidthWidget.dart';
 import 'package:portfolio/Custom_Widgets/SectionTitle.dart';
@@ -61,14 +60,7 @@ class DesktopServices extends StatelessWidget {
                                 height:
                                 MediaQuery.of(context).size.height / 2,
                                 child:
-                                // kIsWeb ? Image.network( "Assets/Images/Mobile.svg"):
-                                SvgPicture.asset(
-                                  "Images/Mobile.svg",
-                                  fit: BoxFit.contain,
-                                  placeholderBuilder: (BuildContext context) => Container(
-                                      padding: const EdgeInsets.all(30.0),
-                                      child: const CircularProgressIndicator()),
-                                ),
+                                 Image.asset( "Assets/Images/Mobile.png",fit: BoxFit.contain)
                               ),
                             ),
                             Expanded(
@@ -149,14 +141,8 @@ class DesktopServices extends StatelessWidget {
                               flex: 5,
                               child: Container(
                                 child:
-                                // kIsWeb ? Image.network( "Assets/Images/Web.svg"):
-                                SvgPicture.asset(
-                                  "Images/Web.svg",
-                                  fit: BoxFit.contain,
-                                  placeholderBuilder: (BuildContext context) => Container(
-                                      padding: const EdgeInsets.all(30.0),
-                                      child: const CircularProgressIndicator()),
-                                ),
+                                Image.asset( "Assets/Images/Web.png",fit: BoxFit.contain)
+
                               ),
                             ),
                           ],

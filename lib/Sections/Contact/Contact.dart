@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/Constants/Constants.dart';
 import 'package:portfolio/Custom_Widgets/MaxWidthWidget.dart';
@@ -110,13 +109,7 @@ class _ContactsState extends State<Contacts> {
               Expanded(
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 25),
-                  child: kIsWeb ? Image.network( "Assets/Images/contact.svg"):  SvgPicture.asset(
-                    "Images/contact.svg",
-                    fit: BoxFit.contain,
-                    placeholderBuilder: (BuildContext context) => Container(
-                        padding: const EdgeInsets.all(30.0),
-                        child: const CircularProgressIndicator()),
-                  ),
+                  child:Image.asset( "Assets/Images/contact.png",fit: BoxFit.contain)
                 ),
               ),
               Expanded(
@@ -466,7 +459,7 @@ class _ContactsState extends State<Contacts> {
                           });
                         },
                         child: FittedBox(
-                          child: Text(
+                          child: SelectableText(
                             "backbenchdevelopersin@gmail.com",
                             style: TextStyle(
                                 fontSize: 28,
