@@ -100,7 +100,7 @@ class _MobileServicesState extends State<MobileServices> with SingleTickerProvid
                                           "Mobile App Development",
                                           style: TextStyle(
                                               fontSize: 32,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               color: kYellowColor),
                                           textAlign: TextAlign.center,
                                         ),
@@ -139,7 +139,7 @@ class _MobileServicesState extends State<MobileServices> with SingleTickerProvid
                                 Expanded(
                                   flex: 5,
                                   child: Container(
-                                    child: Image.asset( "Assets/Images/Web.png",fit: BoxFit.contain)
+                                    child: Image.asset( "Assets/Images/web.png",fit: BoxFit.contain)
                                   ),
                                 ),
                                 Expanded(
@@ -153,7 +153,7 @@ class _MobileServicesState extends State<MobileServices> with SingleTickerProvid
                                           "Web Development",
                                           style: TextStyle(
                                               fontSize: 32,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               color: kYellowColor),
                                           textAlign: TextAlign.center,
                                         ),

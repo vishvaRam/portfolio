@@ -80,6 +80,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
             Text(
               navItems[index],
               style: TextStyle(
+                fontWeight: FontWeight.w500,
                   fontSize: selectedIndex == index ? 20 : 18,
                   color:
                       selectedIndex == index ? kYellowColor : knotSelectedText,
@@ -87,7 +88,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
             ),
             Container(
               height: 4,
-              width: 15,
+              width: 28,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color:
@@ -112,7 +113,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
               padding:  const EdgeInsets.symmetric(horizontal:15.0),
               child: Text(
                 "Back Bench Developers",
-                style: TextStyle(fontSize: kLogoSize, color: kYellowColor,fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: kLogoSize, color: kYellowColor,fontWeight: FontWeight.w600),
               ),
             ),
             Center(

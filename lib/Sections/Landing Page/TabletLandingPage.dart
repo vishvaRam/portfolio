@@ -41,6 +41,12 @@ class _TabletLandingPageState extends State<TabletLandingPage> with SingleTicker
   }
 
   @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
 
 
@@ -92,7 +98,7 @@ class _TabletLandingPageState extends State<TabletLandingPage> with SingleTicker
                                 child: Text(
                                   "Freelance Web & Mobile\nApp Developer",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w200,
+                                      fontWeight: FontWeight.w300,
                                       fontSize: 32,
                                       color: Colors.white70),
                                   textAlign: TextAlign.start,
@@ -108,8 +114,9 @@ class _TabletLandingPageState extends State<TabletLandingPage> with SingleTicker
                               child: FlatButton(
                                 onPressed: () {
                                   widget.scrollController.scrollTo(
-                                      index: 3,
-                                      duration: Duration(milliseconds: 400));
+                                      index: 4,
+                                      curve: Curves.easeInOutCubic,
+                                      duration: Duration(milliseconds:900));
                                 },
                                 child: Padding(
                                   padding: const EdgeInsets.all(5.0),

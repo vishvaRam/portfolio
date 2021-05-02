@@ -152,7 +152,7 @@ class _MainAppState extends State<MainApp>
                                   textAlign: TextAlign.center,
                                 )),
                                 onTap: () {
-                                  itemScrollController.scrollTo(index: 2, duration: Duration(milliseconds: 500),curve: Curves.easeIn);
+                                  itemScrollController.scrollTo(index: 2, duration: Duration(milliseconds: 900),curve: Curves.easeInOutCubic);
                                   Navigator.of(context).pop();
                                 },
                               ),
@@ -168,7 +168,7 @@ class _MainAppState extends State<MainApp>
                                   textAlign: TextAlign.center,
                                 )),
                                 onTap: () {
-                                  itemScrollController.scrollTo(index: 3, duration: Duration(milliseconds: 500),curve: Curves.easeIn);
+                                  itemScrollController.scrollTo(index: 3, duration: Duration(milliseconds: 900),curve: Curves.easeInOutCubic);
                                   Navigator.of(context).pop();
                                 },
                               ),
@@ -184,7 +184,7 @@ class _MainAppState extends State<MainApp>
                                   textAlign: TextAlign.center,
                                 )),
                                 onTap: () {
-                                  itemScrollController.scrollTo(index: 5, duration: Duration(milliseconds: 500),curve: Curves.easeIn);
+                                  itemScrollController.scrollTo(index: 5, duration: Duration(milliseconds: 900),curve: Curves.easeInOutCubic);
                                   Navigator.of(context).pop();
                                 },
                               ),

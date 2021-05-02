@@ -81,6 +81,7 @@ class _TabNavBarState extends State<TabNavBar> {
             Text(
               navItems[index],
               style: TextStyle(
+                fontWeight: FontWeight.w500,
                 fontSize: selectedIndex == index ? 20 : 18,
                 color:
                 selectedIndex == index ? kYellowColor : knotSelectedText,
@@ -88,7 +89,7 @@ class _TabNavBarState extends State<TabNavBar> {
             ),
             Container(
               height: 4,
-              width: 15,
+              width: 24,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color:

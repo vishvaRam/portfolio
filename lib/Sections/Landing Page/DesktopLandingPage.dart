@@ -23,7 +23,6 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
 
   @override
   void initState() {
-
     print("init of Landing Section");
     _animationController= AnimationController(vsync: this,duration: Duration(milliseconds: 400));
     Timer(Duration(milliseconds: 500),()=>    _animationController.forward());
@@ -44,6 +43,8 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
       height: MediaQuery.of(context).size.height,
     );
   }
+
+
 
 
   @override
@@ -82,7 +83,7 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
                                   "I'm Vishva",
                                   style: TextStyle(
                                       fontSize: 170,
-                                      fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.w700,
                                       color: Colors.white),
                                   textAlign: TextAlign.start,
                                   maxLines: 1,
@@ -96,7 +97,7 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
                                 child: Text(
                                   "Freelance Web & Mobile \nApp Developer",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w200,
+                                      fontWeight: FontWeight.w300,
                                       fontSize: 46,
                                       color: Colors.white70),
                                   textAlign: TextAlign.start,
@@ -112,9 +113,9 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
                               child: FlatButton(
                                 onPressed: () {
                                   widget.scrollController.scrollTo(
-                                      index: 3,
+                                      index: 4,
                                       curve: Curves.easeInOutCubic,
-                                      duration: Duration(milliseconds: 400));
+                                      duration: Duration(milliseconds: 900));
                                 },
                                 child: Padding(
                                   padding: const EdgeInsets.all(5.0),

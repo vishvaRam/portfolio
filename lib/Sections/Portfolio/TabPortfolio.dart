@@ -103,7 +103,7 @@ class _TabPortfolioState extends State<TabPortfolio> {
                                 child: Column(
                                   children: [
                                     Expanded(
-                                        flex: 9,
+                                        flex: 10,
                                         child: Container(
                                           width: double.infinity,
                                           child: ClipRRect(
@@ -115,7 +115,7 @@ class _TabPortfolioState extends State<TabPortfolio> {
                                           ),
                                         )),
                                     Expanded(
-                                        flex: 5,
+                                        flex: 6,
                                         child: Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Column(

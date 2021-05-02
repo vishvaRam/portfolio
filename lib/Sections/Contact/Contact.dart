@@ -83,7 +83,7 @@ class _ContactsState extends State<Contacts> {
         tablet: Container(
           height: screenSize.height - kNavBarHeightTab,
           width: screenSize.width / 1.4,
-          child: MaxWidth(child: buildContactTab()),
+          child: MaxWidth(child: buildContactDeskTop()),
         ),
         desktop: MaxWidth(
           child: buildContactDeskTop(),
@@ -127,7 +127,7 @@ class _ContactsState extends State<Contacts> {
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 38,
-                                fontWeight: FontWeight.w600),
+                                fontWeight: FontWeight.w500),
                           ),
                         ),
                       ),
@@ -154,6 +154,7 @@ class _ContactsState extends State<Contacts> {
                                 style: TextStyle(
                                     fontSize: 34,
                                     color: kYellowColor,
+                                    fontWeight: FontWeight.w400,
                                     decoration: TextDecoration.underline),
                               ),
                             ),
@@ -436,7 +437,7 @@ class _ContactsState extends State<Contacts> {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 28,
-                            fontWeight: FontWeight.w400),
+                            fontWeight: FontWeight.w500),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -463,6 +464,7 @@ class _ContactsState extends State<Contacts> {
                             "backbenchdevelopersin@gmail.com",
                             style: TextStyle(
                                 fontSize: 28,
+                                fontWeight: FontWeight.w400,
                                 color: kYellowColor,
                                 decoration: TextDecoration.underline),
                           ),
@@ -711,123 +713,123 @@ class _ContactsState extends State<Contacts> {
     );
   }
 
-  Container buildContactTab() {
-    var screenSize = MediaQuery.of(context).size;
-    return Container(
-      width: screenSize.width / 1.4,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: SectionTitle(
-              title: "Contact",
-              fontSize: 38,
-              lineHeight: 6,
-            ),
-          ),
-          Expanded(
-              child: Container(
-            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-            child: Form(
-              key: formKey,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.topCenter,
-                      child: FittedBox(
-                        child: Text(
-                          "Estimate your project?\nLet me know here.",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 28,
-                              fontWeight: FontWeight.w400),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      child: Builder(
-                        builder: (context) => InkWell(
-                          onTap: () async {
-                            await Clipboard.setData(ClipboardData(
-                                text: "backbenchdevelopersin@gmail.com"))
-                                .then((value) {
-                              print("Copied");
-                              Scaffold.of(context).showSnackBar(SnackBar(
-                                content: Text("Copied"),
-                                behavior: SnackBarBehavior.floating,
-                              ));
-                            });
-                          },
-                          child: FittedBox(
-                            child: Text(
-                              "backbenchdevelopersin@gmail.com",
-                              style: TextStyle(
-                                  fontSize: 28,
-                                  color: kYellowColor,
-                                  decoration: TextDecoration.underline),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
-
-                ],
-              ),
-            ),
-          )),
-          Padding(
-            padding: EdgeInsets.all(8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  child: IconButton(
-                    icon: FaIcon(
-                      FontAwesomeIcons.instagram,
-                      color: kYellowColor,
-                      size: 28,
-                    ),
-                    onPressed: () async {
-                      String url =
-                          "https://www.instagram.com/backbenchdevelopers/";
-                      if (await canLaunch(url)) {
-                        await launch(url);
-                      } else {
-                        throw 'Could not launch $url';
-                      }
-                    },
-                  ),
-                ),
-                Container(
-                  child: IconButton(
-                    icon: FaIcon(
-                      FontAwesomeIcons.linkedin,
-                      color: kYellowColor,
-                      size: 28,
-                    ),
-                    onPressed: () async {
-                      String url =
-                          "https://www.linkedin.com/in/vishva-murthy-8ab273181/";
-                      if (await canLaunch(url)) {
-                        await launch(url);
-                      } else {
-                        throw 'Could not launch $url';
-                      }
-                    },
-                  ),
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
-    );
-  }
+  // Container buildContactTab() {
+  //   var screenSize = MediaQuery.of(context).size;
+  //   return Container(
+  //     width: screenSize.width / 1.4,
+  //     child: Column(
+  //       mainAxisAlignment: MainAxisAlignment.center,
+  //       children: [
+  //         Padding(
+  //           padding: const EdgeInsets.all(15.0),
+  //           child: SectionTitle(
+  //             title: "Contact",
+  //             fontSize: 38,
+  //             lineHeight: 6,
+  //           ),
+  //         ),
+  //         Expanded(
+  //             child: Container(
+  //           padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+  //           child: Form(
+  //             key: formKey,
+  //             child: Column(
+  //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  //               children: [
+  //                 Expanded(
+  //                   child: Container(
+  //                     alignment: Alignment.topCenter,
+  //                     child: FittedBox(
+  //                       child: Text(
+  //                         "Estimate your project?\nLet me know here.",
+  //                         style: TextStyle(
+  //                             color: Colors.white,
+  //                             fontSize: 28,
+  //                             fontWeight: FontWeight.w400),
+  //                         textAlign: TextAlign.center,
+  //                       ),
+  //                     ),
+  //                   ),
+  //                 ),
+  //                 Expanded(
+  //                   child: Container(
+  //                     child: Builder(
+  //                       builder: (context) => InkWell(
+  //                         onTap: () async {
+  //                           await Clipboard.setData(ClipboardData(
+  //                               text: "backbenchdevelopersin@gmail.com"))
+  //                               .then((value) {
+  //                             print("Copied");
+  //                             Scaffold.of(context).showSnackBar(SnackBar(
+  //                               content: Text("Copied"),
+  //                               behavior: SnackBarBehavior.floating,
+  //                             ));
+  //                           });
+  //                         },
+  //                         child: FittedBox(
+  //                           child: Text(
+  //                             "backbenchdevelopersin@gmail.com",
+  //                             style: TextStyle(
+  //                                 fontSize: 28,
+  //                                 color: kYellowColor,
+  //                                 decoration: TextDecoration.underline),
+  //                           ),
+  //                         ),
+  //                       ),
+  //                     ),
+  //                   ),
+  //                 )
+  //
+  //               ],
+  //             ),
+  //           ),
+  //         )),
+  //         Padding(
+  //           padding: EdgeInsets.all(8),
+  //           child: Row(
+  //             mainAxisAlignment: MainAxisAlignment.center,
+  //             children: [
+  //               Container(
+  //                 child: IconButton(
+  //                   icon: FaIcon(
+  //                     FontAwesomeIcons.instagram,
+  //                     color: kYellowColor,
+  //                     size: 28,
+  //                   ),
+  //                   onPressed: () async {
+  //                     String url =
+  //                         "https://www.instagram.com/backbenchdevelopers/";
+  //                     if (await canLaunch(url)) {
+  //                       await launch(url);
+  //                     } else {
+  //                       throw 'Could not launch $url';
+  //                     }
+  //                   },
+  //                 ),
+  //               ),
+  //               Container(
+  //                 child: IconButton(
+  //                   icon: FaIcon(
+  //                     FontAwesomeIcons.linkedin,
+  //                     color: kYellowColor,
+  //                     size: 28,
+  //                   ),
+  //                   onPressed: () async {
+  //                     String url =
+  //                         "https://www.linkedin.com/in/vishva-murthy-8ab273181/";
+  //                     if (await canLaunch(url)) {
+  //                       await launch(url);
+  //                     } else {
+  //                       throw 'Could not launch $url';
+  //                     }
+  //                   },
+  //                 ),
+  //               ),
+  //             ],
+  //           ),
+  //         )
+  //       ],
+  //     ),
+  //   );
+  // }
 }

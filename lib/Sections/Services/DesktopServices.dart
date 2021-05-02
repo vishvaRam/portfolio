@@ -74,7 +74,7 @@ class DesktopServices extends StatelessWidget {
                                       "Mobile App Development",
                                       style: TextStyle(
                                           fontSize: 46,
-                                          fontWeight: FontWeight.w600,
+                                          fontWeight: FontWeight.w500,
                                           color: kYellowColor),
                                       textAlign: TextAlign.start,
                                     ),
@@ -117,7 +117,7 @@ class DesktopServices extends StatelessWidget {
                                         "Web development",
                                         style: TextStyle(
                                             fontSize: 46,
-                                            fontWeight: FontWeight.w600,
+                                            fontWeight: FontWeight.w500,
                                             color: kYellowColor),
                                         textAlign: TextAlign.start,
                                       ),
@@ -141,8 +141,7 @@ class DesktopServices extends StatelessWidget {
                               flex: 5,
                               child: Container(
                                 child:
-                                Image.asset( "Assets/Images/Web.png",fit: BoxFit.contain)
-
+                                Image.asset( "Assets/Images/web.png",fit: BoxFit.contain)
                               ),
                             ),
                           ],
