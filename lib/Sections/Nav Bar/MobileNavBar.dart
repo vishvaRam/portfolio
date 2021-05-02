@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/Constants/Constants.dart';
 import 'package:portfolio/Custom_Widgets/MaxWidthWidget.dart';
 import 'package:portfolio/Custom_Widgets/ResponsiveLayOutBuilder.dart';
-import 'package:portfolio/Sections/Nav%20Bar/DesktopNavBar.dart';
-import 'package:portfolio/Sections/Nav%20Bar/TabNavBar.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import '../../Constants/Constants.dart';
@@ -12,11 +10,12 @@ class AppBarWidget extends StatelessWidget {
   const AppBarWidget({
     Key key,
     @required this.screenSize,
-    @required this.itemScrollController,
+    @required this.itemScrollController, this.sacffoldKey,
   }) : super(key: key);
 
   final Size screenSize;
   final ItemScrollController itemScrollController;
+ final GlobalKey<ScaffoldState> sacffoldKey;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,9 @@ class AppBarWidget extends StatelessWidget {
                 ),
               ),
               leading: IconButton(
-                onPressed: (){},
+                onPressed: (){
+                    sacffoldKey.currentState.openDrawer();
+                },
                 icon: Icon(
                   Icons.menu,
                   color: Colors.white,

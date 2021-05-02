@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/Constants/Constants.dart';
@@ -59,8 +60,10 @@ class DesktopServices extends StatelessWidget {
                                 width: MediaQuery.of(context).size.width / 2,
                                 height:
                                 MediaQuery.of(context).size.height / 2,
-                                child: SvgPicture.asset(
-                                  "Assets/Images/Mobile.svg",
+                                child:
+                                // kIsWeb ? Image.network( "Assets/Images/Mobile.svg"):
+                                SvgPicture.asset(
+                                  "Images/Mobile.svg",
                                   fit: BoxFit.contain,
                                   placeholderBuilder: (BuildContext context) => Container(
                                       padding: const EdgeInsets.all(30.0),
@@ -145,8 +148,10 @@ class DesktopServices extends StatelessWidget {
                             Expanded(
                               flex: 5,
                               child: Container(
-                                child: SvgPicture.asset(
-                                  "Assets/Images/Web.svg",
+                                child:
+                                // kIsWeb ? Image.network( "Assets/Images/Web.svg"):
+                                SvgPicture.asset(
+                                  "Images/Web.svg",
                                   fit: BoxFit.contain,
                                   placeholderBuilder: (BuildContext context) => Container(
                                       padding: const EdgeInsets.all(30.0),

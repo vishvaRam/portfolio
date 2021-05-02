@@ -9,7 +9,6 @@ const Color kPortfolioBG = Color(0xff2D2F3C);
 const Color kPortfolioCard = Color(0xff424657);
 const knotSelectedText = Color(0xff7D7F8A);
 
-
 // BreakPoints
 const kTabletBreakPoint = 767.0;
 const kDesktopBreakPoint = 1440.0;

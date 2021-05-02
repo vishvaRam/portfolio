@@ -9,7 +9,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: "Poppins"),
+      theme: ThemeData(fontFamily: "Poppins",brightness: Brightness.dark),
       title: "Back Bench Developers",
       debugShowCheckedModeBanner: false,
       color: kGrayBackground,

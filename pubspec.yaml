@@ -28,8 +28,13 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   scrollable_positioned_list: ^0.1.10
-  email_validator: ^2.0.1
   flutter_svg: ^0.21.0+1
+  carousel_slider: ^3.0.0
+  url_launcher: ^6.0.3
+  form_field_validator: ^1.1.0
+  font_awesome_flutter: ^9.0.0
+
+
 
 dev_dependencies:
   flutter_test:
@@ -48,18 +53,14 @@ flutter:
 
   assets:
     - Assets/Images/vishva.png
-    - Assets/Images/Contact.svg
-    - Assets/Images/Mobile.svg
     - Assets/Images/banner.png
-    - Assets/Images/pdf 1.png
-    - Assets/Images/pdf 2.png
-    - Assets/Images/home.png
-    - Assets/Images/image.png
-    - Assets/Images/speed 1.png
-    - Assets/Images/speed 2.png
-    - Assets/Images/light mode.png
-    - Assets/Images/Day attendence.png
-    - Assets/Images/Web.svg
+    - Assets/Images/pdf.png
+    - Assets/Images/contact.svg
+    - Assets/Images/web.svg
+    - Assets/Images/Mobile.svg
+    - Assets/Images/ss.png
+    - Assets/Images/ist.png
+    - Assets/Images/at.png
 
 
   # To add assets to your application, add an assets section, like this:

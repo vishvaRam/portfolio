@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/Constants/Constants.dart';
-import 'package:portfolio/Custom_Widgets/MaxWidthWidget.dart';
 import 'package:portfolio/Custom_Widgets/ResponsiveLayOutBuilder.dart';
 import 'package:portfolio/Sections/Nav%20Bar/DesktopNavBar.dart';
-import 'package:portfolio/Sections/Nav%20Bar/MobileNavBar.dart';
 import 'package:portfolio/Sections/Nav%20Bar/TabNavBar.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
