@@ -48,7 +48,6 @@ class _DesktopPortfolioState extends State<DesktopPortfolio> {
                       child: SectionTitle(
                         title: "Portfolio",
                         fontSize: 38,
-                        lineHeight: 6,
                       ),
                     ),
                     Expanded(

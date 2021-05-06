@@ -45,13 +45,12 @@ class _MobileServicesState extends State<MobileServices> with SingleTickerProvid
                     child: SectionTitle(
                       title: "Services",
                       fontSize: 28,
-                      lineHeight: 5,
                     ),
                   ),
                   Container(
                     child: SectionSubTitle(
                       subTitle:
-                      "Your dream to reality. In any platform you want!",
+                      "Your dream to reality. \nIn any platform you want!",
                       fontSize: 24,
                     ),
                   ),

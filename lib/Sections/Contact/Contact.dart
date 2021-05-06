@@ -100,7 +100,6 @@ class _ContactsState extends State<Contacts> {
           child: SectionTitle(
             title: "Contact",
             fontSize: 38,
-            lineHeight: 6,
           ),
         ),
         Expanded(
@@ -149,7 +148,7 @@ class _ContactsState extends State<Contacts> {
                               });
                             },
                             child: FittedBox(
-                              child: SelectableText(
+                              child: Text(
                                 "backbenchdevelopersin@gmail.com",
                                 style: TextStyle(
                                     fontSize: 34,
@@ -417,7 +416,6 @@ class _ContactsState extends State<Contacts> {
           child: SectionTitle(
             title: "Contact",
             fontSize: 28,
-            lineHeight: 5,
           ),
         ),
         Expanded(
@@ -460,7 +458,7 @@ class _ContactsState extends State<Contacts> {
                           });
                         },
                         child: FittedBox(
-                          child: SelectableText(
+                          child: Text(
                             "backbenchdevelopersin@gmail.com",
                             style: TextStyle(
                                 fontSize: 28,

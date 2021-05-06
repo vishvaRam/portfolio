@@ -24,7 +24,7 @@ class DesktopServices extends StatelessWidget {
                   child: SectionTitle(
                     title: "Services",
                     fontSize: 38,
-                    lineHeight: 6,
+                    coloreOftext: kYellowColor,
                   ),
                 ),
                 Expanded(

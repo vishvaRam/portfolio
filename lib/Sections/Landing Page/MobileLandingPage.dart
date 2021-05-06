@@ -32,12 +32,14 @@ class _MobileLandingPageState extends State<MobileLandingPage>
   }
 
   imagesetter(BuildContext context) {
-    return imageOfVishva = Image.asset(
-      "Assets/Images/vishva.png",
-      fit: BoxFit.contain,
-      alignment: Alignment.bottomCenter,
-      width: MediaQuery.of(context).size.width - 10,
-      height: MediaQuery.of(context).size.height,
+    return imageOfVishva = Center(
+      child: Image.asset(
+        "Assets/Images/vishva.png",
+        fit: BoxFit.fitHeight,
+        alignment: Alignment.bottomCenter,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+      ),
     );
   }
 
@@ -63,8 +65,11 @@ class _MobileLandingPageState extends State<MobileLandingPage>
             opacity: _animationController,
             child: Column(
               children: [
-                Expanded(
-                    flex: 4,
+                SizedBox(
+                  height: 4,
+                ),
+                Container(
+                    // flex: 3,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -76,7 +81,7 @@ class _MobileLandingPageState extends State<MobileLandingPage>
                               child: Text(
                                 "I'm Vishva",
                                 style: TextStyle(
-                                    fontSize: 72,
+                                    fontSize: 55,
                                     fontWeight: FontWeight.w700,
                                     color: Colors.white),
                                 maxLines: 1,
@@ -85,8 +90,8 @@ class _MobileLandingPageState extends State<MobileLandingPage>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 15.0, vertical: 5),
+                          padding: const EdgeInsets.only(
+                              left: 15.0,right: 15.0, top: 0,bottom: 5),
                           child: FittedBox(
                             child: Text(
                               "Freelance Web & Mobile\nApp Developer",
@@ -121,7 +126,7 @@ class _MobileLandingPageState extends State<MobileLandingPage>
                         )
                       ],
                     )),
-                Expanded(flex: 6, child: Container(child: imagesetter(context)))
+                Expanded(flex: 7, child: Container(child: imagesetter(context)))
               ],
             ),
           ),

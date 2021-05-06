@@ -70,7 +70,7 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
                   Expanded(
                       flex: 4,
                       child: Container(
-                        height: MediaQuery.of(context).size.height / 1.4,
+                        height: MediaQuery.of(context).size.height / 1.3,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,

@@ -50,7 +50,6 @@ class _MobilePortfolioState extends State<MobilePortfolio> {
                     child: SectionTitle(
                       title: "Portfolio",
                       fontSize: 28,
-                      lineHeight: 5,
                     ),
                   ),
                   Container(

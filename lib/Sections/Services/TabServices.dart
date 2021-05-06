@@ -26,7 +26,6 @@ class TabServices extends StatelessWidget {
                   child: SectionTitle(
                     title: "Services",
                     fontSize: 38,
-                    lineHeight: 6,
                   ),
                 ),
                 Expanded(

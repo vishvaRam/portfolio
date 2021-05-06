@@ -47,7 +47,6 @@ class _TabPortfolioState extends State<TabPortfolio> {
                       child: SectionTitle(
                         title: "Portfolio",
                         fontSize: 38,
-                        lineHeight: 6,
                       ),
                     ),
                     Expanded(
