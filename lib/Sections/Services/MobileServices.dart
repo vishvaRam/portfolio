@@ -109,7 +109,7 @@ class _MobileServicesState extends State<MobileServices> with SingleTickerProvid
                                       ),
                                       FittedBox(
                                         child: Text(
-                                          "We are building beautiful, natively compiled applications\nfor Android and IOS mobiles. Expressive and Flexible UI.\nNative Performance.",
+                                          "We are building beautiful, natively compiled \napplications for Android and IOS mobiles. \nExpressive and Flexible UI ,Native Performance.",
                                           style: TextStyle(
                                               fontSize: 22,
                                               color: Colors.white70,
