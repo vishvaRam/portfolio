@@ -28,9 +28,9 @@ const RESOURCES = {
 "bbd.png": "a02dbdb5aa22091448417a9e2548c60d",
 "icons/Back%20Bench%20Developers%20192x.png": "4c3d1303406cea4677ff69e4788135c4",
 "icons/Back%20Bench%20Developers%20512x.png": "2e370823595208a81922248821401d1b",
-"index.html": "00bd0ad378db346b9304371027f73770",
-"/": "00bd0ad378db346b9304371027f73770",
-"main.dart.js": "d6a4edaf8e9b2f53d07a85c9bc9bc898",
+"index.html": "ac9e4a32274e5adc84fd01d15ae1cf4b",
+"/": "ac9e4a32274e5adc84fd01d15ae1cf4b",
+"main.dart.js": "849e4c76cc305740ba8698cbe81db535",
 "manifest.json": "df336647787f1bf67898e0d0991bdb63",
 "version.json": "426313f2f3133c2f20415344c4a22df3"
 };

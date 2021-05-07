@@ -36,7 +36,7 @@ class _TabletLandingPageState extends State<TabletLandingPage>
       "Assets/Images/vishva.png",
       fit: boxFit,
       alignment: Alignment.bottomCenter,
-      width: MediaQuery.of(context).size.width - 10,
+      width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
     );
   }

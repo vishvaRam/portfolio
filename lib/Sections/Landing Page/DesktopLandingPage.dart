@@ -37,14 +37,18 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
   imagesetter(BuildContext context){
     return imageOfVishva =Image.asset(
       "Assets/Images/vishva.png",
-      fit: BoxFit.contain,
+      fit: BoxFit.fitHeight,
       alignment: Alignment.bottomCenter,
-      width: MediaQuery.of(context).size.width - 10,
+      width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
     );
   }
 
-
+  @override
+  void didChangeDependencies() {
+    imagesetter(context);
+    super.didChangeDependencies();
+  }
 
 
   @override
@@ -136,7 +140,7 @@ class _DesktopLandingPageState extends State<DesktopLandingPage> with SingleTick
                       child: Container(
                           height: MediaQuery.of(context).size.height,
                           alignment: Alignment.center,
-                          child: imagesetter(context)))
+                          child: imageOfVishva))
                 ],
               ),
             ),
