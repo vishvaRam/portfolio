@@ -52,15 +52,15 @@ flutter:
   uses-material-design: true
 
   assets:
-    - Assets/Images/vishva.png
+    - Assets/Images/back-bench-developers-flutter-developers.jpg
     - Assets/Images/banner.png
-    - Assets/Images/pdf.png
+    - Assets/Images/pdf-convertor-plus.jpg
     - Assets/Images/contact.png
     - Assets/Images/web.png
     - Assets/Images/Mobile.png
-    - Assets/Images/ss.png
-    - Assets/Images/ist.png
-    - Assets/Images/at.png
+    - Assets/Images/Status-Saver-plus.jpg
+    - Assets/Images/internet-speed-tester.jpg
+    - Assets/Images/Attendance-Tracker.jpg
 
 
   # To add assets to your application, add an assets section, like this:
