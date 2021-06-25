@@ -17,24 +17,15 @@ class MobileLandingPage extends StatefulWidget {
   _MobileLandingPageState createState() => _MobileLandingPageState();
 }
 
-class _MobileLandingPageState extends State<MobileLandingPage>
-    with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
+class _MobileLandingPageState extends State<MobileLandingPage> {
   var imageOfVishva;
 
-  @override
-  void initState() {
-    print("init of Landing Section");
-    _animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 400));
-    Timer(Duration(milliseconds: 500), () => _animationController.forward());
-    super.initState();
-  }
+
 
   imagesetter(BuildContext context,BoxFit fit) {
     return imageOfVishva = Center(
       child: Image.asset(
-        "Assets/Images/vishva.png",
+        "Assets/Images/back-bench-developers-flutter-developers.jpg",
         fit: fit,
         alignment: Alignment.bottomCenter,
         width: MediaQuery.of(context).size.width,
@@ -44,11 +35,7 @@ class _MobileLandingPageState extends State<MobileLandingPage>
   }
 
 
-  @override
-  void dispose() {
-    _animationController.dispose();
-    super.dispose();
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -59,159 +46,139 @@ class _MobileLandingPageState extends State<MobileLandingPage>
         child: LayoutBuilder(
           builder:(context,constrains){
             if(constrains.maxWidth < 1124){
-              return SlideTransition(
-                position: Tween<Offset>(
-                  begin: Offset(0, 0.3),
-                  end: Offset.zero,
-                ).animate(CurvedAnimation(
-                    parent: _animationController, curve: Curves.easeOut)),
-                child: FadeTransition(
-                  opacity: _animationController,
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 4,
-                      ),
-                      Container(
-                        // flex: 3,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Center(
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 15.0, vertical: 2),
-                                  child: FittedBox(
-                                    child: Text(
-                                      "I'm Vishva",
-                                      style: TextStyle(
-                                          fontSize: 55,
-                                          fontWeight: FontWeight.w700,
-                                          color: Colors.white),
-                                      maxLines: 1,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 15.0,right: 15.0, top: 0,bottom: 5),
-                                child: FittedBox(
-                                  child: Text(
-                                    "Freelance Web & Mobile\nApp Developer",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w300,
-                                        fontSize: 18,
-                                        color: Colors.white70),
-                                    maxLines: 2,
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              FlatButton(
-                                onPressed: () {
-                                  widget.scrollController.scrollTo(
-                                      index: 4,
-                                      curve: Curves.easeInOutCubic,
-                                      duration: Duration(milliseconds: 900));
-                                },
-                                child: Padding(
-                                  padding: const EdgeInsets.all(5.0),
-                                  child: Text(
-                                    "Hire me",
-                                    style: TextStyle(
-                                        fontSize: 18, color: kGrayBackground),
-                                  ),
-                                ),
-                                color: kYellowColor,
-                              )
-                            ],
-                          )),
-                      Expanded(flex: 7, child: Container(child: imagesetter(context, BoxFit.fitHeight)))
-                    ],
+              return Column(
+                children: [
+                  SizedBox(
+                    height: 4,
                   ),
-                ),
+                  Container(
+                    // flex: 3,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Center(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15.0, vertical: 2),
+                              child: FittedBox(
+                                child: Text(
+                                  "I'm Vishva",
+                                  style: TextStyle(
+                                      fontSize: 55,
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.white),
+                                  maxLines: 1,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 15.0,right: 15.0, top: 0,bottom: 5),
+                            child: FittedBox(
+                              child: Text(
+                                "Freelance Web & Mobile\nApp Developer",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w300,
+                                    fontSize: 18,
+                                    color: Colors.white70),
+                                maxLines: 2,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                          FlatButton(
+                            onPressed: () {
+                              widget.scrollController.scrollTo(
+                                  index: 4,
+                                  curve: Curves.easeInOutCubic,
+                                  duration: Duration(milliseconds: 900));
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Text(
+                                "Hire me",
+                                style: TextStyle(
+                                    fontSize: 18, color: kGrayBackground),
+                              ),
+                            ),
+                            color: kYellowColor,
+                          )
+                        ],
+                      )),
+                  Expanded(flex: 7, child: Container(child: imagesetter(context, BoxFit.fitHeight)))
+                ],
               );
             }
             else{
-              return SlideTransition(
-                position: Tween<Offset>(
-                  begin: Offset(0, 0.3),
-                  end: Offset.zero,
-                ).animate(CurvedAnimation(
-                    parent: _animationController, curve: Curves.easeOut)),
-                child: FadeTransition(
-                  opacity: _animationController,
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 4,
-                      ),
-                      Container(
-                        // flex: 3,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Center(
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 15.0, vertical: 2),
-                                  child: FittedBox(
-                                    child: Text(
-                                      "I'm Vishva",
-                                      style: TextStyle(
-                                          fontSize: 55,
-                                          fontWeight: FontWeight.w700,
-                                          color: Colors.white),
-                                      maxLines: 1,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 15.0,right: 15.0, top: 0,bottom: 5),
-                                child: FittedBox(
-                                  child: Text(
-                                    "Freelance Web & Mobile\nApp Developer",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w300,
-                                        fontSize: 18,
-                                        color: Colors.white70),
-                                    maxLines: 2,
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              FlatButton(
-                                onPressed: () {
-                                  widget.scrollController.scrollTo(
-                                      index: 4,
-                                      curve: Curves.easeInOutCubic,
-                                      duration: Duration(milliseconds: 900));
-                                },
-                                child: Padding(
-                                  padding: const EdgeInsets.all(5.0),
-                                  child: Text(
-                                    "Hire me",
-                                    style: TextStyle(
-                                        fontSize: 18, color: kGrayBackground),
-                                  ),
-                                ),
-                                color: kYellowColor,
-                              )
-                            ],
-                          )),
-                      Expanded(flex: 7, child: Container(child: imagesetter(context, BoxFit.fitHeight)))
-                    ],
+              return Column(
+                children: [
+                  SizedBox(
+                    height: 4,
                   ),
-                ),
+                  Container(
+                    // flex: 3,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Center(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15.0, vertical: 2),
+                              child: FittedBox(
+                                child: Text(
+                                  "I'm Vishva",
+                                  style: TextStyle(
+                                      fontSize: 55,
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.white),
+                                  maxLines: 1,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 15.0,right: 15.0, top: 0,bottom: 5),
+                            child: FittedBox(
+                              child: Text(
+                                "Freelance Web & Mobile\nApp Developer",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w300,
+                                    fontSize: 18,
+                                    color: Colors.white70),
+                                maxLines: 2,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                          FlatButton(
+                            onPressed: () {
+                              widget.scrollController.scrollTo(
+                                  index: 4,
+                                  curve: Curves.easeInOutCubic,
+                                  duration: Duration(milliseconds: 900));
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Text(
+                                "Hire me",
+                                style: TextStyle(
+                                    fontSize: 18, color: kGrayBackground),
+                              ),
+                            ),
+                            color: kYellowColor,
+                          )
+                        ],
+                      )),
+                  Expanded(flex: 7, child: Container(child: imagesetter(context, BoxFit.fitHeight)))
+                ],
               );
             }
           }

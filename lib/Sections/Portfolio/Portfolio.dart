@@ -28,10 +28,10 @@ class _PortfolioState extends State<Portfolio> {
   ];
 
   List<List<String>> imagePaths = [
-    ["Assets/Images/pdf.png"],
-    ["Assets/Images/ss.png"],
-    ["Assets/Images/at.png"],
-    ["Assets/Images/ist.png"]
+    ["Assets/Images/pdf-convertor-plus.jpg"],
+    ["Assets/Images/Status-Saver-plus.jpg"],
+    ["Assets/Images/Attendance-Tracker.jpg"],
+    ["Assets/Images/internet-speed-tester.jpg"]
   ];
 
   List<platform> devicePlatform = [
