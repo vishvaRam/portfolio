@@ -33,6 +33,7 @@ dependencies:
   form_field_validator: ^1.1.0
   font_awesome_flutter: ^9.0.0
   transparent_image: ^2.0.0
+  delayed_display: ^2.0.0
 
 
 

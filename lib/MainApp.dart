@@ -50,6 +50,7 @@ class _MainAppState extends State<MainApp>
     } else {
       appBarHeight = 80.0;
     }
+    print(itemPositionsListener);
     return ResponsiveLayoutBuilder(
       mobile: SafeArea(
         child: Scaffold(
